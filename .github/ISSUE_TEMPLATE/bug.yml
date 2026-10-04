@@ -1,0 +1,48 @@
+name: 回報問題
+description: 遊戲出錯、當掉、畫面怪怪的
+labels: ["回報"]
+body:
+  - type: input
+    id: version
+    attributes:
+      label: 版號
+      description: 遊戲頁面最下面顯示的版號
+      placeholder: 例：1.0.0
+    validations:
+      required: true
+  - type: dropdown
+    id: where
+    attributes:
+      label: 發生在哪裡
+      options:
+        - 故事模式
+        - 人機對戰
+        - 其他畫面
+        - 啟動／安裝
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: 發生了什麼事
+      description: 你做了什麼、原本以為會怎樣、實際怎樣
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: 怎麼重現（知道的話）
+      placeholder: |
+        1. 進入 …
+        2. 按 …
+        3. 就會 …
+  - type: textarea
+    id: files
+    attributes:
+      label: 截圖或檔案
+      description: 直接把截圖、錄影檔拖進來
+  - type: input
+    id: pc
+    attributes:
+      label: 電腦與瀏覽器
+      placeholder: 例：Windows 11、Firefox
