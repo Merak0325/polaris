@@ -1,0 +1,43 @@
+name: 分享解題解法
+description: 解題模式裡打得比題目的基準還好——把解法分享給我們
+labels: ["解法"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        打得比題目的基準攻擊還高，**不是錯誤**——基準不一定是最佳解，謝謝你分享！
+        結算畫面按「回報」後，會在遊戲資料夾的 `puzzles_out\reports\` 存一個檔，把它拖進下面「回報檔」那一格就好。
+  - type: input
+    id: version
+    attributes:
+      label: 版號
+      description: 遊戲頁面最下面顯示的版號
+      placeholder: 例：1.0.2
+    validations:
+      required: true
+  - type: input
+    id: puzzle
+    attributes:
+      label: 題號
+      description: 解題畫面上的題號
+      placeholder: 例：#015
+    validations:
+      required: true
+  - type: input
+    id: result
+    attributes:
+      label: 你的成績
+      description: 你打出的攻擊、用了幾手（結算畫面上有）
+      placeholder: 例：17 攻、8 手（基準 15）
+  - type: textarea
+    id: file
+    attributes:
+      label: 回報檔
+      description: 把 puzzles_out\reports\ 裡那個 .json 檔拖進來（一題一個檔，可以一次附好幾題）
+    validations:
+      required: true
+  - type: textarea
+    id: note
+    attributes:
+      label: 想補充的（選填）
+      description: 解法的重點、或你覺得題目哪裡可以改
