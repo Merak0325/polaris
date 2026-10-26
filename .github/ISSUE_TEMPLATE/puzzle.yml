@@ -1,0 +1,37 @@
+name: 提供題目
+description: 在遊戲裡自己出了一道題——把投稿檔寄給我們
+labels: ["題目"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        謝謝你出題！在解題模式首頁按「出題投稿」，畫好題面、擺好解答後按「存成投稿檔」，會在遊戲資料夾的 `puzzles_out\submissions\` 存一個檔，把它拖進下面「投稿檔」那一格就好。
+        題目上要不要顯示你的暱稱，是存檔時你自己勾的；天璇審核時，不適合公開的暱稱可能不顯示。題目會先經過審核，不保證一定收錄。
+        **注意：這裡是公開的。投稿檔裡寫著你填的暱稱，附在這裡之後任何人都看得到——不論你有沒有勾「顯示」。** 不想公開暱稱的話，存檔前把暱稱欄留空。
+  - type: input
+    id: version
+    attributes:
+      label: 版號
+      description: 遊戲頁面最下面顯示的版號
+      placeholder: 例：1.1.0
+    validations:
+      required: true
+  - type: textarea
+    id: file
+    attributes:
+      label: 投稿檔
+      description: 把 puzzles_out\submissions\ 裡那個 .json 檔拖進來（一題一個檔，可以一次附好幾題）
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: 這題的重點（選填）
+      description: 想讓解題的人學到什麼、解法的關鍵在哪一手
+  - type: checkboxes
+    id: consent
+    attributes:
+      label: 確認
+      options:
+        - label: 這道題是我自己出的，同意收進 Polaris 的題庫、隨遊戲公開發佈
+          required: true
