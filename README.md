@@ -1,4 +1,9 @@
-# Polaris
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset=".github/brand/polaris-wordmark-dark.png">
+    <img alt="Polaris 方塊覆盤工具" src=".github/brand/polaris-wordmark-light.png" width="400">
+  </picture>
+</p>
 
 方塊對戰的覆盤與練習工具，附一段故事模式。在你自己的電腦上執行（Windows；Linux 試用版）。
 
