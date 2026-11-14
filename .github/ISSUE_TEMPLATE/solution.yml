@@ -19,7 +19,7 @@ body:
     id: puzzle
     attributes:
       label: 題號
-      description: 解題畫面上的題號，只填數字就好（畫面上是 #015 就填 015；加了 # 會被 GitHub 當成別的 issue 連結）
+      description: 解題畫面上的題號，只填數字就好（畫面上是 `#015` 就填 015；加了 `#` 會被 GitHub 當成別的 issue 連結）
       placeholder: 例：015
     validations:
       required: true
